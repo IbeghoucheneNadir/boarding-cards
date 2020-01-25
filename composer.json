@@ -1,0 +1,13 @@
+{
+    "name": "grafikart/tuto",
+
+    "authors": [
+        {
+            "name": "Nadir IBEGHOUCHENE",
+            "email": "dezkfkzerh@efef.efe"
+        }
+    ],
+    "autoload": {
+        "psr-4" : {"App\\" : "App"}
+    }
+}
