@@ -12,7 +12,7 @@ class Bus extends AbstractTranspostation
 {
 
     /**
-     * Return a message for a trip
+     * Return a message for a trip Bus
      *
      * @return string
      */
@@ -20,7 +20,7 @@ class Bus extends AbstractTranspostation
     {
         // constrcut the message
         $message= 'Take the airport bus from '.$array['Departure'].' to '.$array['Arrival'].'. No seat assignment.';
-        // add end of line 
+
         $message.=''.PHP_EOL;
 
         return $message;
