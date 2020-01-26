@@ -23,7 +23,7 @@ Using Composer :
 
 
 
-If you don't have composer, you can get it from Composer 
+If you don't have composer, you can get it from  [Composer](https://getcomposer.org/)
 
 Run the application :
 
