@@ -21,7 +21,7 @@ class TrainTest extends TestCase
         'Seat'=> '45B'
     );
 
-    public function testPrintMessage()
+    public function testPrintMessage(): void 
     {
         $this->train = new Train();
         $message = $this->train->getMessage($this->trip);

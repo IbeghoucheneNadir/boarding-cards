@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace App\Library\ParserJson\Reader;
 
 /**
@@ -16,7 +16,7 @@ class Json
      *
      * @return array
      */
-    public static function getArrayByJsonFile($filename)
+    public static function getArrayByJsonFile($filename) : array
     {
             return json_decode(file_get_contents($filename),true);
     }

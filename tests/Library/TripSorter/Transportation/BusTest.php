@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use \App\Library\TripSorter\Transportation\Bus;
 use PHPUnit\Framework\TestCase;
 
@@ -21,7 +21,7 @@ class BusTest extends TestCase
     );
     
 
-    public function testGetMessage()
+    public function testGetMessage(): void 
     {
         $this->bus = new Bus();
         $message = $this->bus->getMessage($this->trip);

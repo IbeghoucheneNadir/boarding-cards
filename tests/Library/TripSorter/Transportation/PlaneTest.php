@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use \App\Library\TripSorter\Transportation\Plane;
 use PHPUnit\Framework\TestCase;
 /**
@@ -22,7 +22,7 @@ class PlaneTest extends TestCase
         'Gate' => '10A',
     );
 
-    public function testGetMessage()
+    public function testGetMessage() : void 
     {
         $this->plane = new Plane();
         $message = $this->plane->getMessage($this->trip);

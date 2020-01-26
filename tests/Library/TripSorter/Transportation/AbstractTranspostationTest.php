@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+
 namespace App\Library\TripSorter\Transportation;
 
 /**
@@ -17,6 +17,6 @@ abstract class AbstractTranspostation
     {
         
     }
-    abstract public function getMessage (array $array):string;
+    abstract public function getMessage (array $array);
     
 }

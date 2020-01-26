@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 namespace App\Library\TripSorter\Transportation;
 
 /**
@@ -19,7 +19,7 @@ class Plane extends AbstractTranspostation
      *
      * @return string
      */
-    public function getMessage(array $array)
+    public function getMessage(array $array):string
     {
         // construct the message
         $message  ='From ';

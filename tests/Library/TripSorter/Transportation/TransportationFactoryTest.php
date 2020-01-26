@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use \App\Library\TripSorter\Transportation\TransportationFactory;
 use PHPUnit\Framework\TestCase;
 /**
@@ -17,21 +17,20 @@ class TransportationFactoryTest extends TestCase {
     protected $transpostationFacroty;
 
 
-    public function testGetTransportation () {
+    public function testGetTransportation () : void {
 
             $this->train="Train";
             $this->bus="Bus";
             $this->plane="Plane";
 
             $this->transpostationFacroty = new TransportationFactory();
-            $instanceTrain=$this->transpostationFacroty::getTransportation($this->train);
-            $instanceBus=$this->transpostationFacroty::getTransportation($this->bus);
-            $instancePlane=$this->transpostationFacroty::getTransportation($this->plane);
+            $instanceOfTrain=$this->transpostationFacroty::getTransportation($this->train);
+            $instanceOfBus=$this->transpostationFacroty::getTransportation($this->bus);
+            $instanceOfPlane=$this->transpostationFacroty::getTransportation($this->plane);
 
-
-            $this->assertInstanceOf('App\Library\TripSorter\Transportation\AbstractTranspostation',$instanceTrain);
-            $this->assertInstanceOf('App\Library\TripSorter\Transportation\AbstractTranspostation',$instanceBus);
-            $this->assertInstanceOf('App\Library\TripSorter\Transportation\AbstractTranspostation',$instancePlane);
+            $this->assertInstanceOf('App\Library\TripSorter\Transportation\AbstractTranspostation',$instanceOfTrain);
+            $this->assertInstanceOf('App\Library\TripSorter\Transportation\AbstractTranspostation',$instanceOfBus);
+            $this->assertInstanceOf('App\Library\TripSorter\Transportation\AbstractTranspostation',$instanceOfPlane);
 
         }
     }
