@@ -23,5 +23,4 @@ class TransportationFactory {
                 throw new \Exception('Type is not valid');
         }
     }
-
 }

@@ -11,8 +11,8 @@ namespace App\Library\TripSorter\Transportation;
 class Plane extends AbstractTranspostation
 {
 
-    const MESSAGE_BAGGAGE_TICKET = 'Baggage drop at ticket counter';
-    const MESSAGE_NO_BAGGAGE_TICKET = 'Baggage will we automatically transferred from your last leg.';
+    const MESSAGE_BAGGAGE_TICKET = ' Baggage drop at ticket counter';
+    const MESSAGE_NO_BAGGAGE_TICKET = ' Baggage will we automatically transferred from your last leg.';
 
     /**
      * Return a message for the trip Plane
@@ -36,8 +36,7 @@ class Plane extends AbstractTranspostation
         else
         {
             $message.='Baggage will we automatically transferred from your last leg';;
-        }
-     
+        }     
      return $message;
     }
     

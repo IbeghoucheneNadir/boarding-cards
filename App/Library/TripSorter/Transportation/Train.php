@@ -24,5 +24,4 @@ class Train extends AbstractTranspostation
         $message .= $array['Seat'];
         return $message;
     }
-    
 }
