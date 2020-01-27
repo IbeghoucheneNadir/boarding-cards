@@ -37,8 +37,6 @@ class Plane extends AbstractTranspostation
         {
             $message.='Baggage will we automatically transferred from your last leg';;
         }
-
-        $message.='.'.PHP_EOL;
      
      return $message;
     }

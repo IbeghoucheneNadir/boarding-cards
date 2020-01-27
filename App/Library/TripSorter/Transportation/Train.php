@@ -22,7 +22,6 @@ class Train extends AbstractTranspostation
         $message .= $array['Departure'].' to ';
         $message .= $array['Arrival'].'. Sit in seat ';
         $message .= $array['Seat'];
-        $message.='.'.PHP_EOL;
         return $message;
     }
     

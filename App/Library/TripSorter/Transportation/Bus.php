@@ -21,8 +21,6 @@ class Bus extends AbstractTranspostation
         // constrcut the message
         $message= 'Take the airport bus from '.$array['Departure'].' to '.$array['Arrival'].'. No seat assignment.';
 
-        $message.=''.PHP_EOL;
-
         return $message;
     }
 }

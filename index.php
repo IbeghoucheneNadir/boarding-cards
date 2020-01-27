@@ -1,8 +1,7 @@
 <?php
 
 // Define path to source directory
-defined('SOURCE_FILE_PATH')
-|| define('SOURCE_FILE_PATH', __DIR__ . '/sourcefile/');
+defined('SOURCE_FILE_PATH') || define('SOURCE_FILE_PATH', __DIR__ . '/sourcefile/');
 
 require "vendor/autoload.php";
 
@@ -10,25 +9,28 @@ require "vendor/autoload.php";
 
 use App\Library\TripSorter\Transportation\TransportationFactory;
 
-// Load File Json source
+    // Load File Json source
 
     $sourceFile = SOURCE_FILE_PATH . 'cards.json';
-  
+
     $JsonParser = new App\Library\ParserJson\Reader\Json();
 
     $tripCollection = $JsonParser::getArrayByJsonFile($sourceFile);
 
-    $i=1;
-    echo 'Source File : ' . $sourceFile . PHP_EOL;
-     
-// get and writing text
+    $text = '';
 
-    foreach($tripCollection  as $value){
+    foreach ($tripCollection as $value) {
 
-        echo TransportationFactory::getTransportation($value['Transportation'])->getMessage($value);
-        if($i == count($tripCollection))
-        echo TransportationFactory::getTransportation($value['Transportation'])::MESSAGE_FINAL_DESTINATION . PHP_EOL;
-        $i++;
+        $text .= TransportationFactory::getTransportation($value['Transportation'])->getMessage($value).'*';
     }
+        $text .= TransportationFactory::getTransportation($value['Transportation'])::MESSAGE_FINAL_DESTINATION;
+
+
+    $itemList = $JsonParser::getArrayByString($text);
+
+    $jsonItemList= $JsonParser::encode($itemList);
+
+    echo $jsonItemList;
+
 
 
