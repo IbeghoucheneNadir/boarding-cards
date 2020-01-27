@@ -42,5 +42,4 @@ class Json {
     public static function encode(array $array): string {
         return  json_encode($array);  // or  json_encode($array,JSON_FORCE_OBJECT);
     }
-
 }

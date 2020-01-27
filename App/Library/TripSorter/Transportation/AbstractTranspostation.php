@@ -10,9 +10,6 @@ namespace App\Library\TripSorter\Transportation;
 
 abstract class AbstractTranspostation
 {
-
-    const MESSAGE_FINAL_DESTINATION = 'You have arrived at your final destination.';
-
     public function __construct()
     {
         
