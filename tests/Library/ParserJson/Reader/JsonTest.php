@@ -24,6 +24,7 @@ class JsonTest extends TestCase {
         $this->parser = new Json();
         $array = $this->parser::getArrayByString($text);
         $this->assertTrue(is_array($array));
+        $this->assertEquals(count($array),3);
     }
 
     public function testEncode(): void {
