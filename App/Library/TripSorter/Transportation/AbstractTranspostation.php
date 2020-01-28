@@ -14,6 +14,5 @@ abstract class AbstractTranspostation
     {
         
     }
-    abstract public function getMessage (array $array):string;
-    
+    abstract public function getMessage (array $array):string;   
 }

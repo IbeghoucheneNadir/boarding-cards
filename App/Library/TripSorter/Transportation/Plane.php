@@ -39,5 +39,4 @@ class Plane extends AbstractTranspostation
         }     
      return $message;
     }
-    
 }

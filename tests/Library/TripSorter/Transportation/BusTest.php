@@ -8,24 +8,23 @@ use PHPUnit\Framework\TestCase;
  *
  * @package test\Library\TripSorter\Transportation;
  */
-
-class BusTest extends TestCase
-{
+class BusTest extends TestCase {
 
     protected $bus;
-
     protected $trip = array(
         'Departure' => 'A',
         'Arrival' => 'B',
         'Transportation' => 'Bus',
     );
-    
 
-    public function testGetMessage(): void 
-    {
+    public function testGetMessage(): void {
         $this->bus = new Bus();
-        $message = $this->bus->getMessage($this->trip);
-        $this->assertTrue(strlen($message) > 0);
+        $message1 = $this->bus->getMessage($this->trip);
+        $this->assertTrue(strlen($message1) > 0);
+   
+        $this->trip=array();
+        $message2= $this->bus->getMessage($this->trip);
+        $this->assertTrue(strlen($message2) == 0);
     }
 
 }

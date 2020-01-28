@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 use \App\Library\TripSorter\Transportation\Train;
 use PHPUnit\Framework\TestCase;
 /**
@@ -26,6 +26,5 @@ class TrainTest extends TestCase
         $this->train = new Train();
         $message = $this->train->getMessage($this->trip);
         $this->assertTrue(strlen($message) > 0);
-    }
-    
+    }   
 }

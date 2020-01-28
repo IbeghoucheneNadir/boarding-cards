@@ -7,20 +7,22 @@ namespace App\Library\TripSorter\Transportation;
  *
  * @package App\Library\TripSorter\Transportation;
  */
-
-class Bus extends AbstractTranspostation
-{
+class Bus extends AbstractTranspostation {
 
     /**
      * Return a message for a trip Bus
      *
      * @return string
      */
-    public function getMessage(array $array):string
-    {
+    public function getMessage(array $array): string {
+       
+        if (!isset($array['Departure']) || !isset($array['Arrival'])) 
+        {
+            return "";
+        }
         // constrcut the message
-        $message= 'Take the airport bus from '.$array['Departure'].' to '.$array['Arrival'].'. No seat assignment.';
-        
+        $message = 'Take the airport bus from ' . $array['Departure'] . ' to ' . $array['Arrival'] . '. No seat assignment.';
+
         return $message;
     }
 }
